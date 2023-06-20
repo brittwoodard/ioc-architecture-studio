@@ -126,5 +126,16 @@ background-color: #000;
 
 /* burger menu */
 
+/* JS */
+.pulse-animation {
+  animation: pulse 1s ease-in-out infinite alternate;
+}
 
-
+@keyframes pulse {
+  from {
+    scale: 1.1;
+  }
+  to { 
+    scale: .95
+  }
+}
