@@ -111,3 +111,24 @@ navPoints.forEach(object => {
   object.addEventListener('mouseenter', togglesubPoints)
   object.addEventListener('mouseleave', togglesubPoints)
 })
+
+
+let animatedImages = document.querySelectorAll('.gallery-scroll')
+
+animatedImages.forEach(img => {
+  let tl = gsap.timeline({
+    // duration: "2",
+    scrollTrigger: {
+        trigger: img,
+        start: "top bottom",
+        end: "bottom top",
+        toggleActions: "play none none none",
+        scrub: true,
+        markers: true,
+    },
+    marker: true
+  })
+  .to(img, {scale: '1',})
+  .to(img, {scale: '1', })
+  .to(img, {scale: '.5',})
+})
